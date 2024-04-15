@@ -11,6 +11,9 @@
 .part1 {
     min-width: 30%;
     height: 100vh;
+    background-image: url(img/moai.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .part2 {
