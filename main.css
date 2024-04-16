@@ -58,29 +58,37 @@
 }
 
 .part2 > div > *{
-    padding: 10px;
+    padding: 20px;
 }
 
 .textField {
     height: 100%;
     flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
     background-color: rgb(246, 231, 216, 0.5);
+}
+
+.textField p {
+    width: 60%;
+    font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 .formField {
     flex: 1;
     height: 100%;
+    max-height: 192.219px;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     box-shadow: 1px 1px 5px;
+    overflow-y: auto;
 }
 
 .formField fieldset {  
     border: none;
+    width: 100%;
+    max-height: 100%;
 }
 
 .formField fieldset > span {
@@ -94,8 +102,10 @@
 
 .formField form > div {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     margin: 5px;
+    padding-right: 30px;
 }
 
 .formField form > div > label {
@@ -103,11 +113,50 @@
     padding: 5px 5px 5px 0;
 }
 
+.formField form > div > input:valid {
+    outline-color: #06d622;
+}
+
+.formField form > div > input:invalid {
+    outline-color: #df0101;
+}
+
 .buttonField {
     flex: 1;
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     background-color: rgb(246, 231, 216, 0.5);
+}
+
+.buttonField button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #EEA5A6;
+    border-width: 1px;
+    box-shadow: 1px 1px 2px;
+    margin-bottom: 10px;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+.buttonField button:hover {
+    cursor: pointer;
+}
+
+.buttonField p {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+.buttonField p > a {
+    color: #3D30A2;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
