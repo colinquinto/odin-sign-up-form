@@ -150,13 +150,9 @@
     color: #3D30A2;
 }
 
+/* Remove number input arrow keys for Google etc.*/
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
 }
