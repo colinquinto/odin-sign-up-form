@@ -18,35 +18,46 @@
         </div>
         <div class="part2">
             <div class="textField">
-            
+             <p>
+                This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
+                Sign up now to get started.
+             </p>
+             <p>
+                You know you want to.
+             </p>
             </div>
             <div class="formField">
                 <fieldset>
                     <span>Let's Do This!</span>
-                    <form action="index.html">
+                    <form action="index.html" id="form">
                         <div>
                             <label for="fname">First Name:</label>
-                            <input type="text" name="fname" id="fname">
+                            <input type="text" name="fname" id="fname" required>
                             <label for="lname">Last Name:</label>
-                            <input type="text" name="lname" id="lname">
+                            <input type="text" name="lname" id="lname" required>
                         </div>
                         <div>
                             <label for="email">Email:</label>
-                            <input type="email" name="email" id="email" autocomplete="off">
+                            <input type="email" name="email" id="email" autocomplete="off" required>
                             <label for="number">Number:</label>
-                            <input type="number" name="number" id="number">
+                            <input type="number" name="number" id="number" required>
                         </div>
                         <div>
                             <label for="password">Password:</label>
-                            <input type="password" name="password" id="password" autocomplete="off">
+                            <input type="password" name="password" id="password" autocomplete="off" required>
                             <label for="confirm-password">Confirm Password:</label>
-                            <input type="password" name="confirm-password" id="confirm-password" autocomplete="off">
+                            <input type="password" name="confirm-password" id="confirm-password" autocomplete="off" required>
                         </div>
                     </form>
                 </fieldset>
             </div>
             <div class="buttonField">
-               
+                <div>
+                <button type="submit" form="form">
+                    Create Account
+                </button>
+                <p>Already have an account? <a href="index.html">Log In</a></p>
+                </div>
             </div>
         </div>
     </main>
