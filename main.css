@@ -4,15 +4,20 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: fontOne;
+    src: url(Norse-Bold.otf);
+}
+
 .container {
     display: flex;
 }
 
 .part1 {
     position: relative;
-    min-width: 30%;
+    width: clamp(300px, 30%, 30vw);
     height: 100vh;
-    background-image: url(img/moai.jpg);
+    background-image: url(img/sky.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -21,9 +26,10 @@
     font-size: clamp(2rem, 5vw, 4rem);
     text-align: center;
     background-color: rgba(0,0,0,0.5);
-    padding: 20px;
+    padding: 10px 0;
     color: #fff;
     margin-top: 40px;
+    font-family: fontOne;
 }
 
 .part1 p {
@@ -58,28 +64,50 @@
 .textField {
     height: 100%;
     flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(246, 231, 216, 0.5);
 }
 
 .formField {
     flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 1px 1px 5px;
 }
 
-.formField fieldset {
-    height: 100%;
+.formField fieldset {  
     border: none;
+}
+
+.formField fieldset > span {
+    margin-left: 5px;
 }
 
 .formField form {
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
 .formField form > div {
     display: flex;
     flex-direction: column;
+    margin: 5px;
+}
+
+.formField form > div > label {
+    font-size: 0.7rem;
+    padding: 5px 5px 5px 0;
 }
 
 .buttonField {
     flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(246, 231, 216, 0.5);
 }
